@@ -1,12 +1,12 @@
 *       *********************************************************
 *       *                                                         
-*       * 08/13/20              MENU.MPR                11:49:37  
+*       * 02/06/21              MENU.MPR                15:58:44  
 *       *                                                         
 *       *********************************************************
 *       *                                                         
 *       * CYBERPOWER SAC PERU                                     
 *       *                                                         
-*       * Copyright (C) 2020 CYBERPOWER SAC PERU                  
+*       * Copyright (C) 2021 CYBERPOWER SAC PERU                  
 *       * CYBERPOWER SAC PERU                                     
 *       * LIMA, LIMA  32                                            
 *       * PERU                                              
@@ -130,39 +130,39 @@ ENDIF
 
 DEFINE MENU (m.cMenuName) IN (m.oFormRef.Name) BAR
 
-DEFINE PAD _5u60pckr6 OF (m.cMenuName) PROMPT "Inicio" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yik OF (m.cMenuName) PROMPT "Inicio" COLOR SCHEME 3 ;
 	KEY ALT+I, ""
-DEFINE PAD _5u60pckr7 OF (m.cMenuName) PROMPT "Registro" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yil OF (m.cMenuName) PROMPT "Registro" COLOR SCHEME 3 ;
 	KEY ALT+R, ""
-DEFINE PAD _5u60pckr8 OF (m.cMenuName) PROMPT "Almacen" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yim OF (m.cMenuName) PROMPT "Almacen" COLOR SCHEME 3 ;
 	KEY ALT+A, ""
-DEFINE PAD _5u60pckr9 OF (m.cMenuName) PROMPT "Compra" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yin OF (m.cMenuName) PROMPT "Compra" COLOR SCHEME 3 ;
 	KEY ALT+C, ""
-DEFINE PAD _5u60pckra OF (m.cMenuName) PROMPT "Venta" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yio OF (m.cMenuName) PROMPT "Venta" COLOR SCHEME 3 ;
 	KEY ALT+V, ""
-DEFINE PAD _5u60pckrb OF (m.cMenuName) PROMPT "Caja" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yip OF (m.cMenuName) PROMPT "Caja" COLOR SCHEME 3 ;
 	KEY ALT+C, ""
-DEFINE PAD _5u60pckrc OF (m.cMenuName) PROMPT "Reportes" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yiq OF (m.cMenuName) PROMPT "Reportes" COLOR SCHEME 3 ;
 	KEY ALT+R, ""
-DEFINE PAD _5u60pckrd OF (m.cMenuName) PROMPT "Ayuda" COLOR SCHEME 3 ;
+DEFINE PAD _5z40y8yir OF (m.cMenuName) PROMPT "Ayuda" COLOR SCHEME 3 ;
 	KEY ALT+A, ""
-ON PAD _5u60pckr6 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
-ON PAD _5u60pckr7 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
-ON PAD _5u60pckr8 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[3])
-ON PAD _5u60pckr9 OF (m.cMenuName) ACTIVATE POPUP (a_menupops[4])
-ON PAD _5u60pckra OF (m.cMenuName) ACTIVATE POPUP (a_menupops[5])
-ON PAD _5u60pckrb OF (m.cMenuName) ACTIVATE POPUP (a_menupops[6])
-ON PAD _5u60pckrc OF (m.cMenuName) ACTIVATE POPUP (a_menupops[7])
-ON PAD _5u60pckrd OF (m.cMenuName) ACTIVATE POPUP (a_menupops[8])
+ON PAD _5z40y8yik OF (m.cMenuName) ACTIVATE POPUP (a_menupops[1])
+ON PAD _5z40y8yil OF (m.cMenuName) ACTIVATE POPUP (a_menupops[2])
+ON PAD _5z40y8yim OF (m.cMenuName) ACTIVATE POPUP (a_menupops[3])
+ON PAD _5z40y8yin OF (m.cMenuName) ACTIVATE POPUP (a_menupops[4])
+ON PAD _5z40y8yio OF (m.cMenuName) ACTIVATE POPUP (a_menupops[5])
+ON PAD _5z40y8yip OF (m.cMenuName) ACTIVATE POPUP (a_menupops[6])
+ON PAD _5z40y8yiq OF (m.cMenuName) ACTIVATE POPUP (a_menupops[7])
+ON PAD _5z40y8yir OF (m.cMenuName) ACTIVATE POPUP (a_menupops[8])
 
 DEFINE POPUP (a_menupops[1]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[1]) PROMPT "Cambio de clave"
 DEFINE BAR 2 OF (a_menupops[1]) PROMPT "Salir del sistema"
 ON SELECTION BAR 1 OF (a_menupops[1]) ;
-	DO _5u60pckre ;
+	DO _5z40y8yis ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[1]) ;
-	DO _5u60pckrf ;
+	DO _5z40y8yit ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[2]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -171,16 +171,16 @@ DEFINE BAR 2 OF (a_menupops[2]) PROMPT "Valor cambio"
 DEFINE BAR 3 OF (a_menupops[2]) PROMPT "Usuarios"
 DEFINE BAR 4 OF (a_menupops[2]) PROMPT "Clientes/Proveedor"
 ON SELECTION BAR 1 OF (a_menupops[2]) ;
-	DO _5u60pckrg ;
+	DO _5z40y8yiu ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[2]) ;
-	DO _5u60pckrh ;
+	DO _5z40y8yiv ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 3 OF (a_menupops[2]) ;
-	DO _5u60pckri ;
+	DO _5z40y8yiw ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 4 OF (a_menupops[2]) ;
-	DO _5u60pckrj ;
+	DO _5z40y8yix ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[3]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -188,23 +188,23 @@ DEFINE BAR 1 OF (a_menupops[3]) PROMPT "Productos"
 DEFINE BAR 2 OF (a_menupops[3]) PROMPT "Ingreso/Egreso"
 DEFINE BAR 3 OF (a_menupops[3]) PROMPT "Inventario"
 ON SELECTION BAR 1 OF (a_menupops[3]) ;
-	DO _5u60pckrk ;
+	DO _5z40y8yiy ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[3]) ;
-	DO _5u60pckrl ;
+	DO _5z40y8yiz ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 3 OF (a_menupops[3]) ;
-	DO _5u60pckrm ;
+	DO _5z40y8yj0 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[4]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[4]) PROMPT "Registrar"
 DEFINE BAR 2 OF (a_menupops[4]) PROMPT "Pagos"
 ON SELECTION BAR 1 OF (a_menupops[4]) ;
-	DO _5u60pckrn ;
+	DO _5z40y8yj1 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[4]) ;
-	DO _5u60pckro ;
+	DO _5z40y8yj2 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[5]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -213,32 +213,32 @@ DEFINE BAR 2 OF (a_menupops[5]) PROMPT "Cobros"
 DEFINE BAR 3 OF (a_menupops[5]) PROMPT "Contizacion"
 DEFINE BAR 4 OF (a_menupops[5]) PROMPT "Canje"
 ON SELECTION BAR 1 OF (a_menupops[5]) ;
-	DO _5u60pckrp ;
+	DO _5z40y8yj3 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[5]) ;
-	DO _5u60pckrq ;
+	DO _5z40y8yj4 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 3 OF (a_menupops[5]) ;
-	DO _5u60pckrr ;
+	DO _5z40y8yj5 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 4 OF (a_menupops[5]) ;
-	DO _5u60pckrs ;
+	DO _5z40y8yj6 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[6]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[6]) PROMPT "Consultar"
 ON SELECTION BAR 1 OF (a_menupops[6]) ;
-	DO _5u60pckrt ;
+	DO _5z40y8yj7 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[7]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
 DEFINE BAR 1 OF (a_menupops[7]) PROMPT "Reportes generales"
 DEFINE BAR 2 OF (a_menupops[7]) PROMPT "Reportes de Administracion"
 ON SELECTION BAR 1 OF (a_menupops[7]) ;
-	DO _5u60pckru ;
+	DO _5z40y8yj8 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[7]) ;
-	DO _5u60pckrv ;
+	DO _5z40y8yj9 ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 DEFINE POPUP (a_menupops[8]) MARGIN RELATIVE SHADOW COLOR SCHEME 4
@@ -246,13 +246,13 @@ DEFINE BAR 1 OF (a_menupops[8]) PROMPT "Soporte"
 DEFINE BAR 2 OF (a_menupops[8]) PROMPT "Descargas"
 DEFINE BAR 3 OF (a_menupops[8]) PROMPT "Acerca de"
 ON SELECTION BAR 1 OF (a_menupops[8]) ;
-	DO _5u60pckrw ;
+	DO _5z40y8yja ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 2 OF (a_menupops[8]) ;
-	DO _5u60pckrx ;
+	DO _5z40y8yjb ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 ON SELECTION BAR 3 OF (a_menupops[8]) ;
-	DO _5u60pckry ;
+	DO _5z40y8yjc ;
 	IN LOCFILE("SERVAL_DIEF\MENU\MENU" ,"MPX;MPR|FXP;PRG" ,"WHERE is MENU?")
 
 ACTIVATE MENU (m.cMenuName) NOWAIT
@@ -265,7 +265,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRE  ON SELECTION BAR 1 OF POPUP inicio          
+*       * _5Z40Y8YIS  ON SELECTION BAR 1 OF POPUP inicio          
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -276,13 +276,13 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckre
+PROCEDURE _5z40y8yis
 DO FORM cambio_clave
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRF  ON SELECTION BAR 2 OF POPUP inicio          
+*       * _5Z40Y8YIT  ON SELECTION BAR 2 OF POPUP inicio          
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -293,7 +293,7 @@ DO FORM cambio_clave
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrf
+PROCEDURE _5z40y8yit
 *nres = MESSAGEBOX("¿Realmente desea Salir del Sistema?", 4+48, "Salir del Sistema")
 * IF nres = 6	
 	QUIT
@@ -304,7 +304,7 @@ PROCEDURE _5u60pckrf
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRG  ON SELECTION BAR 1 OF POPUP registro        
+*       * _5Z40Y8YIU  ON SELECTION BAR 1 OF POPUP registro        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -315,13 +315,13 @@ PROCEDURE _5u60pckrf
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrg
+PROCEDURE _5z40y8yiu
 DO FORM config_datos
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRH  ON SELECTION BAR 2 OF POPUP registro        
+*       * _5Z40Y8YIV  ON SELECTION BAR 2 OF POPUP registro        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -332,13 +332,13 @@ DO FORM config_datos
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrh
+PROCEDURE _5z40y8yiv
 DO FORM cambio_moneda
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRI  ON SELECTION BAR 3 OF POPUP registro        
+*       * _5Z40Y8YIW  ON SELECTION BAR 3 OF POPUP registro        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -349,13 +349,13 @@ DO FORM cambio_moneda
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckri
+PROCEDURE _5z40y8yiw
 DO FORM usuarios
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRJ  ON SELECTION BAR 4 OF POPUP registro        
+*       * _5Z40Y8YIX  ON SELECTION BAR 4 OF POPUP registro        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -366,13 +366,13 @@ DO FORM usuarios
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrj
+PROCEDURE _5z40y8yix
 DO FORM clientes_proveedor
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRK  ON SELECTION BAR 1 OF POPUP almacen         
+*       * _5Z40Y8YIY  ON SELECTION BAR 1 OF POPUP almacen         
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -383,13 +383,13 @@ DO FORM clientes_proveedor
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrk
+PROCEDURE _5z40y8yiy
 DO FORM productos
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRL  ON SELECTION BAR 2 OF POPUP almacen         
+*       * _5Z40Y8YIZ  ON SELECTION BAR 2 OF POPUP almacen         
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -400,13 +400,13 @@ DO FORM productos
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrl
+PROCEDURE _5z40y8yiz
 DO FORM producto_mov
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRM  ON SELECTION BAR 3 OF POPUP almacen         
+*       * _5Z40Y8YJ0  ON SELECTION BAR 3 OF POPUP almacen         
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -417,13 +417,13 @@ DO FORM producto_mov
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrm
+PROCEDURE _5z40y8yj0
 DO FORM sum_inventario
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRN  ON SELECTION BAR 1 OF POPUP compra          
+*       * _5Z40Y8YJ1  ON SELECTION BAR 1 OF POPUP compra          
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -434,13 +434,13 @@ DO FORM sum_inventario
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrn
+PROCEDURE _5z40y8yj1
 DO FORM admin_fact_compra
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRO  ON SELECTION BAR 2 OF POPUP compra          
+*       * _5Z40Y8YJ2  ON SELECTION BAR 2 OF POPUP compra          
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -451,13 +451,13 @@ DO FORM admin_fact_compra
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckro
+PROCEDURE _5z40y8yj2
 DO FORM admin_pagos_compra
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRP  ON SELECTION BAR 1 OF POPUP venta           
+*       * _5Z40Y8YJ3  ON SELECTION BAR 1 OF POPUP venta           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -468,13 +468,13 @@ DO FORM admin_pagos_compra
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrp
+PROCEDURE _5z40y8yj3
 DO FORM admin_fact_venta
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRQ  ON SELECTION BAR 2 OF POPUP venta           
+*       * _5Z40Y8YJ4  ON SELECTION BAR 2 OF POPUP venta           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -485,13 +485,13 @@ DO FORM admin_fact_venta
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrq
+PROCEDURE _5z40y8yj4
 DO FORM admin_pagos_venta
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRR  ON SELECTION BAR 3 OF POPUP venta           
+*       * _5Z40Y8YJ5  ON SELECTION BAR 3 OF POPUP venta           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -502,13 +502,13 @@ DO FORM admin_pagos_venta
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrr
+PROCEDURE _5z40y8yj5
 DO FORM contizacion
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRS  ON SELECTION BAR 4 OF POPUP venta           
+*       * _5Z40Y8YJ6  ON SELECTION BAR 4 OF POPUP venta           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -519,13 +519,13 @@ DO FORM contizacion
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrs
+PROCEDURE _5z40y8yj6
 DO FORM canje
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRT  ON SELECTION BAR 1 OF POPUP caja            
+*       * _5Z40Y8YJ7  ON SELECTION BAR 1 OF POPUP caja            
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -536,13 +536,13 @@ DO FORM canje
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrt
+PROCEDURE _5z40y8yj7
 DO FORM caja_admin
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRU  ON SELECTION BAR 1 OF POPUP reportes        
+*       * _5Z40Y8YJ8  ON SELECTION BAR 1 OF POPUP reportes        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -553,13 +553,13 @@ DO FORM caja_admin
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckru
+PROCEDURE _5z40y8yj8
 DO FORM reportes_generales
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRV  ON SELECTION BAR 2 OF POPUP reportes        
+*       * _5Z40Y8YJ9  ON SELECTION BAR 2 OF POPUP reportes        
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -570,13 +570,13 @@ DO FORM reportes_generales
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrv
+PROCEDURE _5z40y8yj9
 DO FORM reportes_admin
 
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRW  ON SELECTION BAR 1 OF POPUP ayuda           
+*       * _5Z40Y8YJA  ON SELECTION BAR 1 OF POPUP ayuda           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -587,7 +587,7 @@ DO FORM reportes_admin
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrw
+PROCEDURE _5z40y8yja
 o = CREATEOBJECT("Shell.Application")
 o.Open("http://www.cyberpowerperu.com/soporte/")
 
@@ -595,7 +595,7 @@ o.Open("http://www.cyberpowerperu.com/soporte/")
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRX  ON SELECTION BAR 2 OF POPUP ayuda           
+*       * _5Z40Y8YJB  ON SELECTION BAR 2 OF POPUP ayuda           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -606,7 +606,7 @@ o.Open("http://www.cyberpowerperu.com/soporte/")
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckrx
+PROCEDURE _5z40y8yjb
  nres = MESSAGEBOX("¿Para poder actualizar la Sesion se Cerrará, Desesa continuar?",4+48,"Actualizar Sistema")
  IF nres = 6
  	
@@ -620,7 +620,7 @@ ENDIF
 
 *       *********************************************************
 *       *                                                         
-*       * _5U60PCKRY  ON SELECTION BAR 3 OF POPUP ayuda           
+*       * _5Z40Y8YJC  ON SELECTION BAR 3 OF POPUP ayuda           
 *       *                                                         
 *       * Procedure Origin:                                       
 *       *                                                         
@@ -631,5 +631,5 @@ ENDIF
 *       *                                                         
 *       *********************************************************
 *
-PROCEDURE _5u60pckry
+PROCEDURE _5z40y8yjc
 DO FORM acerca_de
